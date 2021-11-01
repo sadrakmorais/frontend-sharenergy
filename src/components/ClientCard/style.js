@@ -10,7 +10,7 @@ export const ContainerCard = styled.div`
 	padding: 25px;
 	text-align: center;
 	width: 100%;
-	max-width: 250px;
+	max-width: 280px;
 `;
 export const ContainerEdit = styled.button`
 	cursor: pointer;
@@ -33,6 +33,8 @@ export const ContainerDelete = styled.a`
 `;
 export const FormContainer = styled.div`
 	border-radius: 4px;
+	border: 2px solid #1ba2a1;
+
 	box-shadow: 0px 2px 3px 1px rgba(100, 100, 100, 0.3);
 	width: 100%;
 	padding: 24px;

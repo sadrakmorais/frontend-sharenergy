@@ -18,10 +18,3 @@ export const AlertContainer = styled.div`
 		color: #fff;
 	}
 `;
-
-export const ContainerCard = styled.div`
-	display: flex;
-	gap: 20px;
-	flex-wrap: wrap;
-	justify-content: center;
-`;

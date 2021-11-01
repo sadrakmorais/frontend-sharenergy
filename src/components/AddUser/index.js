@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 import Form from '../../components/Form';
 import Input from '../../components/Input';
 import Button from '@mui/material/Button';
@@ -11,7 +10,6 @@ import * as Yup from 'yup';
 import { POST, GET } from '../../services/api';
 
 const AddClient = () => {
-	//	const history = useHistory();
 	const [name, setName] = useState('');
 	const [participation, setParticipation] = useState('');
 	const [open, setOpen] = useState(false);
@@ -72,7 +70,6 @@ const AddClient = () => {
 	return (
 		<Container>
 			<FormContainer>
-				<h1>Adicione um novo Cliente</h1>
 				<Form onSubmit={HandleAddClient}>
 					<Input
 						label='Nome do Cliente'

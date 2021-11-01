@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ClientCard from '../../components/ClientCard';
+import { Container, AlertContainer, ContainerCard } from './style';
 import { GET } from '../../services/api';
 
 const Clientes = () => {
@@ -17,12 +18,28 @@ const Clientes = () => {
 		fetchClients();
 	}, []);
 
+	const totalParticipations = clients.map((e) => e.participation);
+
+	const isValidTotal = totalParticipations.reduce((acc, att) => {
+		return acc + att;
+	}, 0);
+
+	const maxParticiparion = (total) => {
+		return 100 - total;
+	};
+
 	return (
-		<div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-			{clients.map((event) => {
-				return <ClientCard event={event} key={event._id} />;
-			})}
-		</div>
+		<Container>
+			<AlertContainer>
+				<h1>{maxParticiparion(isValidTotal)}% de participação disponível!</h1>
+			</AlertContainer>
+
+			<ContainerCard>
+				{clients.map((event) => {
+					return <ClientCard event={event} key={event._id} />;
+				})}
+			</ContainerCard>
+		</Container>
 	);
 };
 

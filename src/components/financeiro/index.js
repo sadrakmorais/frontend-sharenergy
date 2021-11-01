@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import dadosUsina from '../../json/dadosUsina';
 import CashClientCard from '../../components/CashClient';
-import { Container, ContainerReceita, ContainerCard } from './style';
+import { ContainerReceita } from './style';
 import { GET } from '../../services/api';
 
 const Financeiro = () => {
@@ -40,16 +40,17 @@ const Financeiro = () => {
 	};
 
 	return (
-		<Container>
+		<>
 			<ContainerReceita>
-				<h1> Receita total do dia : {(receitaPotencia() * valorKWH).toFixed(2)} R$</h1>
+				{' '}
+				Receita total do dia : {(receitaPotencia() * valorKWH).toFixed(2)} R$
 			</ContainerReceita>
-			<ContainerCard>
+			<div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
 				{clients.map((event) => {
 					return <CashClientCard event={event} key={event._id} />;
 				})}
-			</ContainerCard>
-		</Container>
+			</div>
+		</>
 	);
 };
 
