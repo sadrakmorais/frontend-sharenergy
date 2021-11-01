@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu as Container, MenuLink } from './styles';
+import { MenuUl, Container, MenuLink } from './styles';
 import BarChart from '@material-ui/icons/BarChart';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import PeopleAlt from '@material-ui/icons/PeopleAlt';
 import AddBox from '@material-ui/icons/AddBox';
 
 const Menu = () => {
-	const { pathname } = useLocation(); /** URL atual do navegador */
+	const { pathname } = useLocation();
 	return (
 		<Container>
-			<ul>
+			<MenuUl>
 				<MenuLink active={pathname === '/home'}>
 					<BarChart style={{ fontSize: 30 }} />
 					<Link to='/home'>Visualização de Dados</Link>
@@ -27,7 +27,7 @@ const Menu = () => {
 					<AttachMoney style={{ fontSize: 30 }} />
 					<Link to='/financeiro'>Financeiro</Link>
 				</MenuLink>
-			</ul>
+			</MenuUl>
 		</Container>
 	);
 };

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContainerInput = styled.ul`
 	display: flex;
-	width: 100%;
+	max-width: 100%;
 	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
@@ -14,6 +14,7 @@ export const ContainerInput = styled.ul`
 		display: flex;
 		gap: 25px;
 	}
+
 	& > ul > li {
 		display: flex;
 		align-items: center;
@@ -24,6 +25,17 @@ export const ContainerInput = styled.ul`
 	& > ul > li > label {
 		font-size: 1.3em;
 	}
+
+	@media (max-width: 800px) {
+		max-width: 100px;
+		& > ul {
+			gap: 10px;
+			flex-direction: column;
+		}
+		& > ul > li > label {
+			font-size: 0.9em;
+		}
+	}
 `;
 export const ContainerGraph = styled.div`
 	display: flex;
@@ -31,4 +43,7 @@ export const ContainerGraph = styled.div`
 	justify-content: flex-start;
 	width: 100%;
 	height: 600px;
+	@media (max-width: 800px) {
+		height: 400px;
+	}
 `;

@@ -66,9 +66,15 @@ const BarChart = () => {
 	};
 
 	return (
-		<div>
+		<div
+			style={{
+				width: '100%',
+				display: 'flex',
+				flexDirection: 'column',
+				justifyContent: 'center',
+				gap: '10px',
+			}}>
 			<ContainerInput>
-				<h1>Selecione uma variável:</h1>
 				<ul>
 					<li>
 						<input

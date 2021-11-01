@@ -4,6 +4,10 @@ export const Container = styled.section`
 	display: flex;
 	width: 100%;
 	height: 100%;
+
+	@media (max-width: 800px) {
+		flex-direction: column;
+	}
 `;
 
 export const Workspace = styled.div`
@@ -17,4 +21,8 @@ export const Workspace = styled.div`
 	justify-content: flex-start;
 	gap: 100px;
 	flex-direction: column;
+	@media (max-width: 800px) {
+		gap: 50px;
+		padding: 20px;
+	}
 `;
