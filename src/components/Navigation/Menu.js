@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MenuUl, Container, MenuLink } from './styles';
+import { MenuUl, Container, MenuLink, ContainerIcons } from './styles';
 import BarChart from '@material-ui/icons/BarChart';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import PeopleAlt from '@material-ui/icons/PeopleAlt';
@@ -12,19 +12,27 @@ const Menu = () => {
 		<Container>
 			<MenuUl>
 				<MenuLink active={pathname === '/home'}>
-					<BarChart style={{ fontSize: 30 }} />
+					<ContainerIcons>
+						<BarChart style={{ width: '100%' }} />
+					</ContainerIcons>
 					<Link to='/home'>Visualização de Dados</Link>
 				</MenuLink>
 				<MenuLink active={pathname === '/clientes'}>
-					<PeopleAlt style={{ fontSize: 30 }} />
+					<ContainerIcons>
+						<PeopleAlt style={{ width: '100%' }} />
+					</ContainerIcons>
 					<Link to='/clientes'>Clientes</Link>
 				</MenuLink>
 				<MenuLink active={pathname === '/addclientes'}>
-					<AddBox style={{ fontSize: 30 }} />
+					<ContainerIcons>
+						<AddBox style={{ width: '100%' }} />
+					</ContainerIcons>
 					<Link to='/addclientes'>Adicione Clientes</Link>
 				</MenuLink>
 				<MenuLink active={pathname === '/financeiro'}>
-					<AttachMoney style={{ fontSize: 30 }} />
+					<ContainerIcons>
+						<AttachMoney style={{ width: '100%' }} />
+					</ContainerIcons>
 					<Link to='/financeiro'>Financeiro</Link>
 				</MenuLink>
 			</MenuUl>

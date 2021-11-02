@@ -17,8 +17,6 @@ export const Workspace = styled.div`
 	overflow-y: auto;
 	padding: 80px;
 	display: flex;
-	align-items: center;
-	justify-content: flex-start;
 	gap: 100px;
 	flex-direction: column;
 	@media (max-width: 800px) {

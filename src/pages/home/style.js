@@ -36,6 +36,7 @@ export const AlertContainer = styled.div`
 export const ContainerGraph = styled.div`
 	width: 100%;
 	max-width: 1000px;
+	align-self: center;
 	@media (max-width: 450px) {
 		max-width: 400px;
 	}

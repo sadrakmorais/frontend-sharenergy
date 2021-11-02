@@ -52,7 +52,22 @@ export const MenuLink = styled.li`
 		& > a {
 			padding: 5px 6px;
 			font-size: 0.7em;
+			border-radius: 2px;
 		}
+		&:hover {
+			background: transparent;
+		}
+		${({ active }) =>
+			active &&
+			css`
+				 {
+					background: transparent;
+					color: #ffffff;
+				}
+				& > a {
+					color: #ffffff;
+				}
+			`}
 	}
 
 	&:hover {
@@ -82,5 +97,14 @@ export const ContainerLogo = styled.div`
 		& > img {
 			max-width: 200px;
 		}
+	}
+`;
+
+export const ContainerIcons = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@media (max-width: 800px) {
+		width: 20px;
 	}
 `;
