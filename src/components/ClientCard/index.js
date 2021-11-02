@@ -128,7 +128,7 @@ const ClientCard = ({ event }) => {
 			<ContainerCard>
 				<Avatar {...stringAvatar(event.name)} />
 				<h1>{event.name}</h1>
-				<p>Essa bixa vai faturar {event.participation}%</p>
+				<p>Participação nos lucros: {event.participation}%</p>
 				<div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
 					<ContainerEdit onClick={handleModalClient}>
 						Clique para editar

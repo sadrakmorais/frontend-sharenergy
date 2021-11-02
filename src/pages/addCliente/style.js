@@ -17,4 +17,11 @@ export const AlertContainer = styled.div`
 	& > h1 {
 		color: #fff;
 	}
+	@media (max-width: 800px) {
+		border-radius: 20px;
+		padding: 20px 40px;
+		& > h1 {
+			font-size: 1.2em;
+		}
+	}
 `;
