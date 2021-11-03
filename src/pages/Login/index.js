@@ -61,6 +61,17 @@ const Login = () => {
 			if (error instanceof Yup.ValidationError) {
 				return alert('Preencha todos os campos corretamente');
 			}
+
+			const { status } = error.response;
+
+			switch (status) {
+				case 404:
+					return alert('Usuário nao encontrado');
+				case 401:
+					return alert('Senha incorreta');
+				default:
+					return alert('API quebrou');
+			}
 		}
 	};
 
