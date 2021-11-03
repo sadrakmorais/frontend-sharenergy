@@ -19,15 +19,16 @@ export const Container = styled.aside`
 
 export const MenuUl = styled.nav`
 	width: 100%;
-	margin-top: 48px;
+	margin-top: 60px;
 	display: flex;
 	flex-direction: column;
+	gap: 10px;
 	@media (max-width: 800px) {
 		margin-top: 0;
 		flex-direction: row;
 		max-height: 200px;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: flex-start;
 	}
 `;
 
@@ -37,9 +38,9 @@ export const MenuLink = styled.li`
 	transition: 0.2s all ease;
 	display: flex;
 	align-items: center;
-	padding: 10px;
+	padding: 5px;
 	& > a {
-		padding: 10px 12px;
+		padding: 5px 12px;
 		cursor: pointer;
 		font-size: 20px;
 		color: rgba(20, 20, 20);
@@ -106,5 +107,45 @@ export const ContainerIcons = styled.div`
 	justify-content: center;
 	@media (max-width: 800px) {
 		width: 20px;
+	}
+`;
+
+export const ContainerLogOut = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& > button {
+		border-radius: 4px;
+		width: 100%;
+		padding: 10px;
+		cursor: pointer;
+		border: 3px solid #fff;
+		background: transparent;
+		color: #fff;
+		font-weight: bold;
+		font-size: 1.1em;
+		letter-spacing: 3px;
+		transition: 0.2s all ease;
+	}
+	& > button:hover {
+		background-color: #fff;
+		color: #13afa4;
+		border-color: #13afa4;
+	}
+	@media (max-width: 800px) {
+		width: 80px;
+		padding: 5px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+
+		& > button {
+			padding: 0;
+			border: 2px solid #fff;
+			font-size: 0.7em;
+			letter-spacing: 2px;
+			transition: 0.2s all ease;
+		}
 	}
 `;

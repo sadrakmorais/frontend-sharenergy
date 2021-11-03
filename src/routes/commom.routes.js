@@ -5,6 +5,7 @@ import Home from '../pages/home';
 import Clientes from '../pages/clientes';
 import Financeiro from '../pages/financeiro';
 import AddClientes from '../pages/addCliente';
+import AddAdmins from '../pages/addAdmin';
 
 const ApplicationRoutes = () => {
 	return (
@@ -31,6 +32,11 @@ const ApplicationRoutes = () => {
 				<Route exact path='/financeiro'>
 					<Layout>
 						<Financeiro />
+					</Layout>
+				</Route>
+				<Route exact path='/addadmin'>
+					<Layout>
+						<AddAdmins />
 					</Layout>
 				</Route>
 			</Switch>

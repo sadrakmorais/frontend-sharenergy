@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
 import CommomStack from './commom.routes';
 
-const Routes = () => {
+import { AuthContext } from '../store/Auth';
+import AuthStack from './auth.routes';
 
-	return  <CommomStack />;
+const Routes = () => {
+	const { isLogged } = useContext(AuthContext);
+
+	console.log({ isLogged });
+
+	if (!isLogged) {
+		return <AuthStack />;
+	}
+
+	return <CommomStack />;
 };
 
 export default Routes;

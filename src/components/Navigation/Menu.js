@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MenuUl, Container, MenuLink, ContainerIcons } from './styles';
+import { MenuUl, Container, MenuLink, ContainerIcons, ContainerLogOut } from './styles';
 import BarChart from '@material-ui/icons/BarChart';
 import AttachMoney from '@material-ui/icons/AttachMoney';
 import PeopleAlt from '@material-ui/icons/PeopleAlt';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import AddBox from '@material-ui/icons/AddBox';
+import { AuthContext } from '../../store/Auth';
 
 const Menu = () => {
+	const { signOut } = useContext(AuthContext);
 	const { pathname } = useLocation();
 	return (
 		<Container>
@@ -35,6 +38,16 @@ const Menu = () => {
 					</ContainerIcons>
 					<Link to='/financeiro'>Financeiro</Link>
 				</MenuLink>
+				<MenuLink active={pathname === '/addadmin'}>
+					<ContainerIcons>
+						<AdminPanelSettingsIcon style={{ width: '100%' }} />
+					</ContainerIcons>
+					<Link to='/addadmin'>Adicionar Administrador</Link>
+				</MenuLink>
+
+				<ContainerLogOut>
+					<button onClick={signOut}>SAIR</button>
+				</ContainerLogOut>
 			</MenuUl>
 		</Container>
 	);
