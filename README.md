@@ -1,19 +1,14 @@
 # DOCUMENTAÇÃO
 
 
-## Iniciando o projeto :
-```
-Primeiramente instale todas as dependencias através do comando
+## Para iniciar o projeto, utilize o comando:
+### `yarn start`
 
- `yarn install` ou `npm install`
-
-Depois que as dependências estiverm instaladas utilize esse comando para iniciar o sistema:
-
-`yarn start`
-```
 
 # DEPENDÊNCIAS:
 
+## Para instalar todas a dependências utilize o comando :
+### `yarn install`
 
 ## @emotion/react , @emotion/styled
 ```
